@@ -1,0 +1,21 @@
+{
+	"name" : "MBTI Test",
+	"metrics" : [
+		"Extraversion/Intraversion",
+		"Intuitive/Sensing",
+		"Thinking/Feeling",
+		"Judging/Perceiving"
+	],
+	"questions" : [
+		{
+			"text" : "Question 1!",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "Question 2!",
+			"indicator" : 1,
+			"direction" : -1
+		}
+	]
+}

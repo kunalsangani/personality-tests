@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1= test.name
+	each question,index in test.questions
+		p #{question.text}
+		input(name=index, type='radio')
+		input(name=index, type='radio')
