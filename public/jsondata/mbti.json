@@ -16,6 +16,11 @@
 			"text" : "Question 2!",
 			"indicator" : 1,
 			"direction" : -1
+		},
+		{
+			"text" : "Question 3!",
+			"indicator" : 2,
+			"direction" : 1
 		}
 	]
 }
