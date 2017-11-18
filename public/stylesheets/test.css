@@ -90,7 +90,17 @@ p.agree, p.disagree {
 	top: -20px;
 	margin-left: 5px;
 	margin-right: 5px;
+	font-weight: bold;
 }
+
+p.agree {
+	color: #006600;
+}
+
+p.disagree {
+	color: #002266;
+}
+
 
 /*[type="radio"]:checked,
 [type="radio"]:not(:checked) {
