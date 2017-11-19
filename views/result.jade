@@ -1,13 +1,12 @@
 extends layout
 
 block content
-	.container#title_container
-		.row
-			.col-lg-12
-				h1= test.name
-	.container#results_container
-		each metric,index in test.metrics
-			p #{metric} #{results[index]}
+	section.panel
+		h1.mid_panel= test.name
+	each metric,index in test.metrics
+		section.panel.long_panel
+			.mid_panel
+				p #{metric} #{results[index]}
 
 
 block packages
@@ -15,3 +14,6 @@ block packages
 	link(rel='stylesheet', href='/stylesheets/results.css')
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa",crossorigin="anonymous")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js")
+	script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")
+	script(src="/javascripts/section_screens.js")

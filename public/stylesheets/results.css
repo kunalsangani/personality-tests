@@ -1,3 +1,25 @@
 body {
-	font-family: "Gentium Basic", serif !important;
+	padding: 0px;
+	margin: 0px;
+ 	font-family: "Gentium Basic", serif;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.mid_panel {
+	position: relative;
+	top: 50%;
+}
+
+.panel {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.long_panel {
+	margin-bottom: 400px;
 }
