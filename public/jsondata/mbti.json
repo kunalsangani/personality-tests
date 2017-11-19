@@ -8,19 +8,54 @@
 	],
 	"questions" : [
 		{
-			"text" : "Question 1!",
+			"text" : "I find that I brainstorm best by discussing my ideas with others",
 			"indicator" : 0,
 			"direction" : 1
 		},
 		{
-			"text" : "Question 2!",
+			"text" : "I take every opportunity I can to catch up with friends",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "I feel comfortable speaking in front of large crowds",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "I find it thrilling to meet new people",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "I find it easy to be vulnerable with others",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "After a long day, I often need to recharge by watching TV, reading a book, or playing video games",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "I don't mind going to a museum or nice restaurant on my own",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "Question xx",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "Question 3!",
-			"indicator" : 2,
-			"direction" : 1
+			"text" : "I find it more important to give clear instructions than big-picture context",
+			"indicator" : 1,
+			"direction" : -1
+		},
+		{
+			"text" : "I find I'm most productive when I make a to-do list for the day",
+			"indicator" : 1,
+			"direction" : -1
 		}
 	]
 }

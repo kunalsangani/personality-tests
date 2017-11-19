@@ -13,10 +13,10 @@ var process_results = function(test, submission) {
 	var totals = new Array(mbti.metrics.length).fill(0);
 	for (var i = 0; i < test.questions.length; i++) {
 		if(!submission[test.questions[i].id]) submission[test.questions[i].id] = 0;
-		result[test.questions[i].indicator] += test.questions[i].direction * submission[test.questions[i].id];
-		totals[test.questions[i].indicator] += 3;
+		result[test.questions[i].indicator] += (test.questions[i].direction * submission[test.questions[i].id]) + 3;
+		totals[test.questions[i].indicator] += 6;
 	}
-	//for (var i = 0; i < result.length; i++) result[i] = result[i] / totals[i];
+	for (var i = 0; i < result.length; i++) result[i] = result[i] / totals[i];
 	return result;
 }
 
