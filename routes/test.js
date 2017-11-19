@@ -26,9 +26,9 @@ router.get('/mbti', function(req, res, next) {
 	res.render('test', { test : mbti });
 });
 
-router.post('/mbti', function(req, res, next) {
+router.post('/mbti/result', function(req, res, next) {
 	res.render('result', { 
-		metrics : mbti.metrics, 
+		test : mbti, 
 		results : process_results(mbti, req.body) 
 	});
 });

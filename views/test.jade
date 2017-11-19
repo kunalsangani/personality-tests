@@ -6,7 +6,7 @@ block content
 			.col-lg-12
 				h1= test.name
 	.container#test_container
-		form(method='POST')
+		form(action='/test/mbti/result', method='POST')
 			each question in test.questions
 				.row
 					.col-lg-12

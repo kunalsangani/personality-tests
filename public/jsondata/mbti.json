@@ -56,6 +56,16 @@
 			"text" : "I find I'm most productive when I make a to-do list for the day",
 			"indicator" : 1,
 			"direction" : -1
+		},
+		{
+			"text" : "A key to a successful meeting is being able to read a room",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "I like to carefully plan my vacations",
+			"indicator" : 3,
+			"direction" : 1
 		}
 	]
 }
