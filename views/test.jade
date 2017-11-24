@@ -7,25 +7,35 @@ block content
 				h1= test.name
 	.container#test_container
 		form(action='/test/mbti/result', method='POST')
-			each question in test.questions
-				.row
-					.col-lg-12
-						p.statement #{question.text}
-				.row
-					.radio_row.col-lg-12
-						p.disagree DISAGREE
-						each val in [-3, -2, -1, 0, 1, 2, 3]
-							input.radiobtn(name=question.id, type='radio', value=val)
-							label(radio_value=val)
-						p.agree AGREE
-				hr
+			.owl-carousel
+				- for(var i = 0; i < test.questions.length/5; i++) {
+					.carousel-question-wrapper
+						each subindex in [0, 1, 2, 3, 4]
+							if test.questions[5*i + subindex]
+								.row
+									.col-lg-12
+										p.statement #{test.questions[5*i + subindex].text}
+								.row
+									.radio_row.col-lg-12
+										p.disagree DISAGREE
+										each val in [-3, -2, -1, 0, 1, 2, 3]
+											input.radiobtn(name=test.questions[5*i + subindex].id, type='radio', value=val)
+											label(radio_value=val)
+											// span.glyphicon.glyphicon-thumbs-up(radio_value=val)
+										p.agree AGREE	
+								hr							
+				- }
 			.row
 				.col-lg-12
-					button(type='submit') Submit
+					button.btn.btn-default#next-page(type='button') Next
+					button.btn.btn-default#submit-form(type='submit') Submit
 
 block packages
 	link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u",crossorigin="anonymous")
+	link(rel="stylesheet",href="/owlcarousel/assets/owl.carousel.min.css")
+	link(rel="stylesheet",href="/owlcarousel/assets/owl.theme.default.min.css")
 	link(rel='stylesheet', href='/stylesheets/test.css')
 	script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa",crossorigin="anonymous")
+	script(src="/owlcarousel/owl.carousel.min.js")
 	script(src='/javascripts/test.js')

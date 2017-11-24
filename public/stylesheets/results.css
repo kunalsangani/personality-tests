@@ -23,3 +23,13 @@ html, body {
 .long_panel {
 	margin-bottom: 400px;
 }
+
+p.metric {
+	font-size: 48px;
+}
+
+p.percentage_fit {
+	font-size: 100px;
+	position: relative;
+	top: -40px;
+}

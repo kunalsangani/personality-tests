@@ -21,6 +21,7 @@ var radio_labels = $('input[type="radio"] + label');
 radio_labels.on('click', function(event) {
 	$(event.target).prev().prop('checked', true);
 });
+
 for (var i = 0; i < radio_labels.length; i++) {
 	var radio_value = $(radio_labels[i]).attr('radio_value');
 	if(radio_value < 0) {
@@ -34,3 +35,25 @@ for (var i = 0; i < radio_labels.length; i++) {
 		$(radio_labels[i]).addClass(classes[Math.abs(radio_value) - 1]);
 	}
 }
+
+$(document).ready(function() {
+	$('#submit-form').hide();
+
+	var owl = $('.owl-carousel');
+
+	owl.owlCarousel({
+		items:1,
+		mouseDrag:false
+	});
+
+	$('#next-page').click(function() {
+		owl.trigger('next.owl.carousel');
+	})
+
+	owl.on('changed.owl.carousel', function(event) {
+		if(event.page.index === event.page.count - 1) {
+			$('#next-page').hide();
+			$('#submit-form').show();
+		}
+	})
+})

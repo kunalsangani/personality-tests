@@ -12,11 +12,16 @@ body {
 
 .statement {
 	font-size: 16px;
+	margin: 10px 0 10px 0;
 }
 
 [type="radio"] {
 	position: absolute;
 	opacity: 0;
+}
+
+hr {
+	margin: 10px 0 10px 0;
 }
 
 input[type="radio"] + label {

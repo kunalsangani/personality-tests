@@ -1,10 +1,46 @@
 {
 	"name" : "MBTI Test",
 	"metrics" : [
-		"Extraversion/Intraversion",
-		"Intuitive/Sensing",
-		"Thinking/Feeling",
-		"Judging/Perceiving"
+		{
+			"yes" : {
+				"short" : "E",
+				"long" : "Extroverted"
+			},
+			"no" : {
+				"short" : "I",
+				"long" : "Introverted"
+			}
+		},
+		{
+			"yes" : {
+				"short" : "N",
+				"long" : "Intuitive"
+			},
+			"no" : {
+				"short" : "S",
+				"long" : "Sensing"
+			}
+		},
+		{
+			"yes" : {
+				"short" : "T",
+				"long" : "Thinking"
+			},
+			"no" : {
+				"short" : "F",
+				"long" : "Feeling"
+			}
+		},
+		{
+			"yes" : {
+				"short" : "J",
+				"long" : "Judging"
+			},
+			"no" : {
+				"short" : "P",
+				"long" : "Perceiving"
+			}
+		}
 	],
 	"questions" : [
 		{
@@ -13,22 +49,27 @@
 			"direction" : 1
 		},
 		{
-			"text" : "I take every opportunity I can to catch up with friends",
+			"text" : "I like to pack my weekends with social engagements",
 			"indicator" : 0,
 			"direction" : 1
 		},
 		{
-			"text" : "I feel comfortable speaking in front of large crowds",
+			"text" : "I feel at ease in big cities",
 			"indicator" : 0,
 			"direction" : 1
 		},
 		{
-			"text" : "I find it thrilling to meet new people",
+			"text" : "I find it thrilling to meet new people and learn about their experiences",
 			"indicator" : 0,
 			"direction" : 1
 		},
 		{
 			"text" : "I find it easy to be vulnerable with others",
+			"indicator" : 0,
+			"direction" : 1
+		},
+		{
+			"text" : "I often make new connections at events or outings",
 			"indicator" : 0,
 			"direction" : 1
 		},
@@ -43,19 +84,104 @@
 			"direction" : -1
 		},
 		{
-			"text" : "Question xx",
+			"text" : "My friends would describe me as 'reflective.'",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "I find it easy to get caught up in my own thoughts and zone out from the world around me",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "I prefer to spend time with friends one-on-one rather than in a large group",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "I prefer to work in a personal office or library rather than in a cafe or lounge",
+			"indicator" : 0,
+			"direction" : -1
+		},
+		{
+			"text" : "I enjoy thinking through theoretical ideas and frameworks",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I thrive on solving new problems",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I often find that metaphors and symbols resonate with me",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I often think about humankind and its destiny",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I tend to think about the root cause for phenomena",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I work best with managers who give clear and prescriptive instructions",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "I find it more important to give clear instructions than big-picture context",
+			"text" : "Experience is a better indicator of future success than creativity",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "I find I'm most productive when I make a to-do list for the day",
+			"text" : "I learn best from hands-on experience",
 			"indicator" : 1,
 			"direction" : -1
+		},
+		{
+			"text" : "I prefer to learn practical and applied skills",
+			"indicator" : 1,
+			"direction" : -1
+		},
+		{
+			"text" : "xx",
+			"indicator" : 1,
+			"direction" : -1
+		},
+		{
+			"text" : "I try to use logical and impartial criteria to make a decision",
+			"indicator" : 2,
+			"direction" : 1
+		},
+		{
+			"text" : "It is more important to be truthful than tactful",
+			"indicator" : 2,
+			"direction" : 1
+		},
+		{
+			"text" : "I can be perceived as 'stubborn' or 'strong-headed'",
+			"indicator" : 2,
+			"direction" : 1
+		},
+		{
+			"text" : "I often weigh the pros and cons of a decision before I make it",
+			"indicator" : 2,
+			"direction" : 1
+		},
+		{
+			"text" : "I enjoy fields like engineering and science with clear, objective criteria",
+			"indicator" : 2,
+			"direction" : 1
+		},
+		{
+			"text" : "I am not easily swayed by others' wishes",
+			"indicator" : 2,
+			"direction" : 1
 		},
 		{
 			"text" : "A key to a successful meeting is being able to read a room",
@@ -63,9 +189,54 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I like to carefully plan my vacations",
+			"text" : "I am diplomatic",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "When friends are going through a tough time, I tend to offer sympathy rather than advice",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "I think compassion is more important than justice",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "I tend to compromise easily if it helps maintain harmony",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "I find it easy to understand others' experiences and motivations",
+			"indicator" : 2,
+			"direction" : -1
+		},
+		{
+			"text" : "I like to carefully plan vacations",
 			"indicator" : 3,
 			"direction" : 1
+		},
+		{
+			"text" : "I like to build routines",
+			"indicator" : 3,
+			"direction" : 1
+		},
+		{
+			"text" : "I work in bursts of energy",
+			"indicator" : 3,
+			"direction" : -1
+		},
+		{
+			"text" : "I think thorough planning is likely to ruin a good vacation",
+			"indicator" : 3,
+			"direction" : -1
+		},
+		{
+			"text" : "I prefer to keep my options open",
+			"indicator" : 3,
+			"direction" : -1
 		}
 	]
 }

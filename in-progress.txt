@@ -1,0 +1,27 @@
+TODO:
+
+Test page
+	Add "About" test and interface
+	Navigation bar
+	Finish writing questions
+	Revise Agree/Disagree buttons so it is not a direct copy
+		Maybe use thumbs-up signs with circle around them
+	Format buttons
+
+Intro page
+	Three simple panes with about and take the test / compatibility
+	Find a better font
+
+Results page
+	One result snapshot up at top
+	Explain each dimension and what it means
+	Facebook / email share button
+	Add link to compatibility test (with fill in for result 1?)
+	Backend database logging results
+
+Compatibility test
+	Interface (select E/I radio buttons, then enter percentages)
+	Backend algorithm
+	Result (just status bar - "Read more" for more detail?)
+	How did we do questionaire 
+	Backend database logging results
