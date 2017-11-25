@@ -125,7 +125,7 @@
 			"direction" : 1
 		},
 		{
-			"text" : "I find it thrilling to meet new people and learn about their experiences",
+			"text" : "I find it thrilling to meet new people",
 			"indicator" : 0,
 			"direction" : 1
 		},
@@ -140,12 +140,12 @@
 			"direction" : 1
 		},
 		{
-			"text" : "After a long day, I often need to recharge by watching TV, reading a book, or playing video games",
+			"text" : "After a long day, I prefer to recharge by watching TV, reading a book, or playing video games alone",
 			"indicator" : 0,
 			"direction" : -1
 		},
 		{
-			"text" : "I don't mind going to a museum or nice restaurant on my own",
+			"text" : "I find that I brainstorm best when able to think about a problem on my own for a while",
 			"indicator" : 0,
 			"direction" : -1
 		},
@@ -155,7 +155,7 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I find it easy to get caught up in my own thoughts and zone out from the world around me",
+			"text" : "I have as much fun doing something alone as I would doing it with others",
 			"indicator" : 0,
 			"direction" : -1
 		},
@@ -165,7 +165,7 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I prefer to work in a personal office or library rather than in a cafe or lounge",
+			"text" : "I find spending long hours at work or with friends draining",
 			"indicator" : 0,
 			"direction" : -1
 		},
@@ -175,22 +175,27 @@
 			"direction" : 1
 		},
 		{
-			"text" : "I thrive on solving new problems",
+			"text" : "I easily find connections between very different fields of study or jobs",
 			"indicator" : 1,
 			"direction" : 1
 		},
 		{
-			"text" : "I often find that metaphors and symbols resonate with me",
+			"text" : "I easily grasp metaphors and symbols while reading",
 			"indicator" : 1,
 			"direction" : 1
 		},
 		{
-			"text" : "I often think about humankind and its destiny",
+			"text" : "I often think about the meaning of life",
 			"indicator" : 1,
 			"direction" : 1
 		},
 		{
 			"text" : "I tend to think about the root cause for phenomena",
+			"indicator" : 1,
+			"direction" : 1
+		},
+		{
+			"text" : "I sometimes trust principles and metaphors more than my actual experience",
 			"indicator" : 1,
 			"direction" : 1
 		},
@@ -205,22 +210,27 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I learn best from hands-on experience",
+			"text" : "I find it much harder to learn things from reading or hearing about them than from doing them hands-on",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "I prefer to learn practical and applied skills",
+			"text" : "I prefer to learn practical and applied skills over abstract ideas",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "xx",
+			"text" : "I gravitate towards jobs where I can use my hands",
 			"indicator" : 1,
 			"direction" : -1
 		},
 		{
-			"text" : "I try to use logical and impartial criteria to make a decision",
+			"text" : "When putting together a report or presentation, I have a knack for paying close attention to detail",
+			"indicator" : 1,
+			"direction" : -1
+		},
+		{
+			"text" : "I am likely to use logical and impartial criteria to make a decision",
 			"indicator" : 2,
 			"direction" : 1
 		},
@@ -230,7 +240,7 @@
 			"direction" : 1
 		},
 		{
-			"text" : "I can be perceived as 'stubborn' or 'strong-headed'",
+			"text" : "My friends would call me 'stubborn' or 'strong-headed'",
 			"indicator" : 2,
 			"direction" : 1
 		},
@@ -250,7 +260,7 @@
 			"direction" : 1
 		},
 		{
-			"text" : "A key to a successful meeting is being able to read a room",
+			"text" : "I have a knack for being able to read a room",
 			"indicator" : 2,
 			"direction" : -1
 		},
@@ -275,17 +285,37 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I find it easy to understand others' experiences and motivations",
+			"text" : "I find it difficult to be angry with others, even when I don't agree with their choices",
 			"indicator" : 2,
 			"direction" : -1
 		},
 		{
-			"text" : "I like to carefully plan vacations",
+			"text" : "I like to carefully plan each day of a vacation to get the most out of it",
 			"indicator" : 3,
 			"direction" : 1
 		},
 		{
-			"text" : "I like to build routines",
+			"text" : "I often make to-do lists of my priorities for the day",
+			"indicator" : 3,
+			"direction" : 1
+		},
+		{
+			"text" : "I plan my work in advance so that I easily meet deadlines",
+			"indicator" : 3,
+			"direction" : 1
+		},
+		{
+			"text" : "I like routine",
+			"indicator" : 3,
+			"direction" : 1
+		},
+		{
+			"text" : "I feel uneasy when I haven't yet made a decision about an upcoming plan",
+			"indicator" : 3,
+			"direction" : 1
+		},
+		{
+			"text" : "I prefer to get my work done before play",
 			"indicator" : 3,
 			"direction" : 1
 		},
@@ -300,7 +330,22 @@
 			"direction" : -1
 		},
 		{
-			"text" : "I prefer to keep my options open",
+			"text" : "I rarely hesitate before jumping into new experiences",
+			"indicator" : 3,
+			"direction" : -1
+		},
+		{
+			"text" : "I am often late",
+			"indicator" : 3,
+			"direction" : -1
+		},
+		{
+			"text" : "My friends would call me 'impulsive' or 'spontaneous'",
+			"indicator" : 3,
+			"direction" : -1
+		},
+		{
+			"text" : "I think the best decision is one that keeps my options open",
 			"indicator" : 3,
 			"direction" : -1
 		}

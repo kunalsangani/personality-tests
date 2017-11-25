@@ -21,18 +21,18 @@ block content
 	.container#test-container
 		form(action='/test/mbti/result', method='POST')
 			.owl-carousel
-				- for(var i = 0; i < test.questions.length/5; i++) {
+				- for(var i = 0; i < test.questions.length/6; i++) {
 					.carousel-question-wrapper
-						each subindex in [0, 1, 2, 3, 4]
-							if test.questions[5*i + subindex]
+						each subindex in [0, 1, 2, 3, 4, 5]
+							if test.questions[6*i + subindex]
 								.row
 									.col-xs-12
-										p.statement #{test.questions[5*i + subindex].text}
+										p.statement #{test.questions[6*i + subindex].text}
 								.row
 									.radio_row.col-xs-12
 										p.disagree.hidden-xs DISAGREE
 										each val in [-3, -2, -1, 0, 1, 2, 3]
-											input.radiobtn(name=test.questions[5*i + subindex].id, type='radio', value=val)
+											input.radiobtn(name=test.questions[6*i + subindex].id, type='radio', value=val)
 											label(radio_value=val)
 											// span.glyphicon.glyphicon-thumbs-up(radio_value=val)
 										p.agree.hidden-xs AGREE
