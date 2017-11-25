@@ -30,7 +30,6 @@ for (var i = 0; i < radio_labels.length; i++) {
 		$(radio_labels[i]).addClass('agree');
 	} 
 	if(Math.abs(radio_value) > 0 && Math.abs(radio_value) < 4) {
-		console.log('hi')
 		var classes = ['small', 'med', 'max'];
 		$(radio_labels[i]).addClass(classes[Math.abs(radio_value) - 1]);
 	}
@@ -48,6 +47,9 @@ $(document).ready(function() {
 
 	$('#next-page').click(function() {
 		owl.trigger('next.owl.carousel');
+		$('html,body').animate({
+		 	scrollTop: $('#test-container').offset().top
+		}, 400)
 	})
 
 	owl.on('changed.owl.carousel', function(event) {

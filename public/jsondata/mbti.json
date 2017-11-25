@@ -2,44 +2,110 @@
 	"name" : "MBTI Test",
 	"metrics" : [
 		{
-			"yes" : {
+			"1" : {
 				"short" : "E",
 				"long" : "Extroverted"
 			},
-			"no" : {
+			"0" : {
 				"short" : "I",
 				"long" : "Introverted"
 			}
 		},
 		{
-			"yes" : {
+			"1" : {
 				"short" : "N",
 				"long" : "Intuitive"
 			},
-			"no" : {
+			"0" : {
 				"short" : "S",
 				"long" : "Sensing"
 			}
 		},
 		{
-			"yes" : {
+			"1" : {
 				"short" : "T",
 				"long" : "Thinking"
 			},
-			"no" : {
+			"0" : {
 				"short" : "F",
 				"long" : "Feeling"
 			}
 		},
 		{
-			"yes" : {
+			"1" : {
 				"short" : "J",
 				"long" : "Judging"
 			},
-			"no" : {
+			"0" : {
 				"short" : "P",
 				"long" : "Perceiving"
 			}
+		}
+	],
+	"types" : [
+		{
+			"short" : "ISFP",
+			"description" : "Composer"
+		},
+		{
+			"short" : "ESFP",
+			"description" : "Performer"
+		},
+		{
+			"short" : "INFP",
+			"description" : "Healer"
+		},
+		{
+			"short" : "ENFP",
+			"description" : "Champion"
+		},
+		{
+			"short" : "ISTP",
+			"description" : "Crafter"
+		},
+		{
+			"short" : "ESTP",
+			"description" : "Promoter"
+		},
+		{
+			"short" : "INTP",
+			"description" : "Architect"
+		},
+		{
+			"short" : "ENTP",
+			"description" : "Inventor"
+		},
+		{
+			"short" : "ISFJ",
+			"description" : "Protector"
+		},
+		{
+			"short" : "ESFJ",
+			"description" : "Provider"
+		},
+		{
+			"short" : "INFJ",
+			"description" : "Counselor"
+		},
+		{
+			"short" : "ENFJ",
+			"description" : "Teacher"
+		},
+		{
+			"short" : "ISTJ",
+			"description" : "Inspector"
+		},
+		{
+			"short" : "ESTJ",
+			"description" : "Supervisor"
+		},
+		{
+			"short" : "INTJ",
+			"description" : "Mastermind"
+		},
+		{
+			"short" : "ENTJ",
+			"description" : "Fieldmarshal"
 		}
 	],
 	"questions" : [

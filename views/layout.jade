@@ -1,9 +1,13 @@
 doctype html
 html
-  head
-    title= title
-    link(href="https://fonts.googleapis.com/css?family=Gentium+Basic",rel="stylesheet")
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
-    block packages
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	head
+		title= title
+		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400",rel="stylesheet")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		block content
+		hr
+		#footer-container.container-fluid
+			p Find Your Type
+		block packages

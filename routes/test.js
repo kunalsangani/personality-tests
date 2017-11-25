@@ -8,6 +8,14 @@ for (var i = 0; i < mbti.questions.length; i++) {
 	mbti.questions[i].id = i;
 }
 
+var convert_binary_to_index = function(binary_array) {
+	var index = 0;
+	for(var i = 0; i < binary_array.length; i++) {
+		index += binary_array[i] * Math.pow(2, i);
+	}
+	return index;
+}
+
 var process_results = function(test, submission) {
 	var result = new Array(test.metrics.length).fill(0);
 	var totals = new Array(test.metrics.length).fill(0);
@@ -22,18 +30,19 @@ var process_results = function(test, submission) {
 
 var clean_results = function(test, results) {
 	var headline_result = "";
-	var binary_options = ["no", "yes"];
 	var binary_results = new Array(test.metrics.length);
 	for(var i = 0; i < results.length; i++) {
 		var result_index = Math.floor(2 * results[i]);
-		binary_results[i] = binary_options[result_index];
+		binary_results[i] = result_index;
 		headline_result += test.metrics[i][binary_results[i]].short;
 		if(result_index == 0) 
 			results[i] = 1 - results[i];
 	}
+	var iObj = test.types[convert_binary_to_index(binary_results)];
+	console.log(headline_result, iObj.short, iObj.description)
 
 	return {
-		'headline_result' : headline_result,
+		'headline_result' : iObj,
 		'binary_results' : binary_results,
 		'results': results
 	};
