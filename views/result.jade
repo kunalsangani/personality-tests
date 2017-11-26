@@ -3,12 +3,16 @@ extends layout
 block content
 	.nav.navbar.navbar-default
 		.container-fluid
-			.navbar-header(data-spy="affix")
-			.collapse.navbar-collapse
+			.navbar-header
+				button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='/') FIND YOUR TYPE
+			#navbar.collapse.navbar-collapse
 				ul.nav.navbar-nav
-					li: a(href='/') FIND YOUR TYPE
 					li: a(href='/test/mbti') TAKE THE TEST
-					li: a(href='#') COMPATIBILITY
+					li: a(href='/test/compatibility') COMPATIBILITY
 
 	#headline-container.container-fluid
 		.row

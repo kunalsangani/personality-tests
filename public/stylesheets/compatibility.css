@@ -1,0 +1,36 @@
+body {
+	padding: 0px;
+	margin: 0px;
+ 	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#headline-container {
+	text-align: center;
+}
+
+#title {
+	font-size: 35px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin: 15px 0 5px 0;
+}
+
+h2, #subtitle {
+	font-size: 20px;
+	font-weight: 200;
+	font-style: italic;
+	margin: 0 0 15px 0;
+}
+
+input.percentage-input, #result-percentage {
+	font-size: 70px;
+	font-weight: 200;
+	text-align: center;
+	max-width: 100% !important;
+	background: none;
+	border: none;
+}
+
+#result-wrapper {
+	margin-top: 20px;
+}
