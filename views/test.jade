@@ -35,10 +35,9 @@ block content
 								.row
 									.radio_row.col-xs-12
 										p.disagree.hidden-xs DISAGREE
-										each val in [-3, -2, -1, 0, 1, 2, 3]
-											input.radiobtn(name=test.questions[6*i + subindex].id, type='radio', value=val)
-											label(radio_value=val)
-											// span.glyphicon.glyphicon-thumbs-up(radio_value=val)
+										// each val in [-3, -2, -1, 0, 1, 2, 3]
+										//	input.radiobtn(name=test.questions[6*i + subindex].id, type='radio', value=val)
+										//	label(radio_value=val)
 										p.agree.hidden-xs AGREE
 										input.slider(type='range',min='-3',max='3',value='0')
 								.row.visible-xs

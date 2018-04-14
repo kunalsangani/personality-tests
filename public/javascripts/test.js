@@ -16,7 +16,21 @@ for (var i = 0; i < radio_labels.length; i++) {
 	}
 }
 
-$('.slider').append('<span class="glyphicon glyphicon-align-left"></span>')
+$('.slider').on('change', function(e) {
+	if(e.target.value >= 0) {
+		$(e.target).removeClass('disagree')
+		if(e.target.value > 0) {
+			$(e.target).addClass('agree')
+		}
+	}
+	if(e.target.value <= 0) {
+		$(e.target).removeClass('agree')
+		if(e.target.value < 0) {
+			$(e.target).addClass('disagree')
+		}
+	}
+	console.log(e.target.value)
+})
 
 $(document).ready(function() {
 	$('#submit-form').hide();
