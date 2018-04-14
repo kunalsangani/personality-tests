@@ -1,22 +1,3 @@
-// $(function() {
-// 	var controller = new ScrollMagic.Controller({
-// 		globalSceneOptions: {
-// 			triggerHook : 'onLeave'
-// 		}
-// 	});
-
-// 	var slides = document.querySelectorAll('section.panel');
-
-// 	for (var i = 0; i < slides.length; i++) {
-// 		new ScrollMagic.Scene({
-// 			triggerElement: slides[i]
-// 		})
-// 		.setPin(slides[i])
-// 		.addIndicators()
-// 		.addTo(controller);
-// 	} 
-// })
-
 var radio_labels = $('input[type="radio"] + label');
 radio_labels.on('click', function(event) {
 	$(event.target).prev().prop('checked', true);
@@ -34,6 +15,8 @@ for (var i = 0; i < radio_labels.length; i++) {
 		$(radio_labels[i]).addClass(classes[Math.abs(radio_value) - 1]);
 	}
 }
+
+$('.slider').append('<span class="glyphicon glyphicon-align-left"></span>')
 
 $(document).ready(function() {
 	$('#submit-form').hide();
