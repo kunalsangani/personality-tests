@@ -34,16 +34,12 @@ block content
 										p.statement #{test.questions[6*i + subindex].text}
 								.row
 									.radio_row.col-xs-12
-										p.disagree.hidden-xs DISAGREE
-										// each val in [-3, -2, -1, 0, 1, 2, 3]
-										//	input.radiobtn(name=test.questions[6*i + subindex].id, type='radio', value=val)
-										//	label(radio_value=val)
-										p.agree.hidden-xs AGREE
-										input.slider(type='range',min='-3',max='3',value='0')
-								.row.visible-xs
-									// .col-xs-12
-									//	p.disagree DISAGREE
-									//	p.agree AGREE
+										input.slider(name=test.questions[6*i + subindex].id, type='range',min='-3',max='3',value='0')
+								.row
+									.col-xs-6
+										p.disagree DISAGREE
+									.col-xs-6
+										p.agree AGREE
 										
 								hr.question-break							
 				- }
@@ -53,11 +49,8 @@ block content
 					button.btn.btn-default#submit-form(type='submit') Submit
 
 block packages
-	link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u",crossorigin="anonymous")
 	link(rel="stylesheet",href="/owlcarousel/assets/owl.carousel.min.css")
 	link(rel="stylesheet",href="/owlcarousel/assets/owl.theme.default.min.css")
 	link(rel='stylesheet', href='/stylesheets/test.css')
-	script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
-	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa",crossorigin="anonymous")
 	script(src="/owlcarousel/owl.carousel.min.js")
 	script(src='/javascripts/test.js')

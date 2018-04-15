@@ -34,3 +34,22 @@ a {
 	position: relative;
 	top: 35%;
 }
+
+.btn, .btn:focus {
+	font-size: 18px;
+	padding: 8px 28px;
+	border-radius: 28px;
+	border: solid;
+	border-width: 4px;
+	border-color: #ff9514;
+	background-color: #ff9514;
+	color: #FFFFFF;
+	outline: 0;
+}
+
+.btn:hover {
+	background-color: #FFFFFF;
+	color: #ff9514;
+	border-color: #ff9514;
+	transition: 0.3s;
+}

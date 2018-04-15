@@ -29,17 +29,25 @@ $('.slider').on('change', function(e) {
 			$(e.target).addClass('disagree')
 		}
 	}
-	console.log(e.target.value)
 })
+
+var alignlabels = function() {
+	$('p.agree').css('padding-right', window.getComputedStyle($('.slider')[0])['margin-left'])
+	$('p.disagree').css('padding-left', window.getComputedStyle($('.slider')[0])['margin-right'])
+}
 
 $(document).ready(function() {
 	$('#submit-form').hide();
+
+	$('.slider').ready(alignlabels)
+	$(window).on('resize', alignlabels)
 
 	var owl = $('.owl-carousel');
 
 	owl.owlCarousel({
 		items:1,
-		mouseDrag:false
+		mouseDrag:false,
+		touchDrag: false
 	});
 
 	$('#next-page').click(function() {

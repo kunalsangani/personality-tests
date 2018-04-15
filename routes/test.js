@@ -138,7 +138,7 @@ var run_compatibilities = function(test, inputs) {
 
 /* GET home page. */
 router.get('/mbti', function(req, res, next) {
-	mbti.questions.sort(function() { return 0.5 - Math.random();});
+	mbti.questions.sort(function() { return 0.5 - Math.random(); });
 	res.render('test', { test : mbti });
 });
 
