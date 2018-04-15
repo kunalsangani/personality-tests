@@ -2,46 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 var fs = require('fs');
+var url = require('url');
+var utils = require('./test-utils.js');
 
 var mbti = JSON.parse(fs.readFileSync('./public/jsondata/mbti.json','utf8'));
 for (var i = 0; i < mbti.questions.length; i++) {
 	mbti.questions[i].id = i;
 }
 
-var convert_binary_to_index = function(binary_array) {
-	var index = 0;
-	for(var i = 0; i < binary_array.length; i++) {
-		index += binary_array[i] * Math.pow(2, i);
-	}
-	return index;
-}
-
-var process_results = function(test, submission) {
-	var result = new Array(test.metrics.length).fill(0);
-	var totals = new Array(test.metrics.length).fill(0);
-	for (var i = 0; i < test.questions.length; i++) {
-		if(!submission[test.questions[i].id]) submission[test.questions[i].id] = 0;
-		result[test.questions[i].indicator] += (test.questions[i].direction * submission[test.questions[i].id]) + 3;
-		totals[test.questions[i].indicator] += 6;
-	}
-	for (var i = 0; i < result.length; i++) result[i] = result[i] / totals[i];
-	return result;
-}
-
-var clean_results = function(test, results) {
-	var binary_results = new Array(test.metrics.length),
-		adj_results = new Array(test.metrics.length);
-	for(var i = 0; i < results.length; i++) {
-		binary_results[i] = Math.floor(2 * results[i]);
-		adj_results[i] = Math.abs(1 - binary_results[i] - results[i]);
-	}
-
-	return {
-		'headline_result' : test.types[convert_binary_to_index(binary_results)],
-		'binary_results' : binary_results,
-		'results': adj_results
-	};
-}
+/*
 
 var produce_weights2 = function(test, results) {
 	var PARAMETER_SKEW = 8;
@@ -136,6 +105,8 @@ var run_compatibilities = function(test, inputs) {
 	return calculate_compatibility(test, results[0], results[1]);
 }
 
+*/
+
 /* GET home page. */
 router.get('/mbti', function(req, res, next) {
 	mbti.questions.sort(function() { return 0.5 - Math.random(); });
@@ -143,17 +114,30 @@ router.get('/mbti', function(req, res, next) {
 });
 
 router.post('/mbti/result', function(req, res, next) {
-	var results_obj = clean_results(mbti, process_results(mbti, req.body));
+	var result_percentages = utils.convert_submission_to_percentages(mbti, req.body);
+	res.redirect(url.format({
+		pathname: '/test/mbti/result',
+		query: {
+			'percentages' : utils.encode_percentages_as_string(result_percentages)
+		}
+	}));
+});
+
+router.get('/mbti/result', function(req, res, next) {
+	console.log(req.query)
+	console.log(req.query.percentages)
+	var percentages = utils.decode_to_percentages(mbti, req.query.percentages)
+	var results_obj = utils.process_percentages(mbti, percentages);
 	res.render('result', { 
 		test : mbti, 
 		headline_result : results_obj.headline_result,
 		binary_results : results_obj.binary_results,
-		results : results_obj.results 
+		results : results_obj.display_percentages 
 	});
 });
 
 router.get('/compatibility', function(req, res, next) {
-	res.render('compatibility', {test : mbti });
+	res.render('compatibility', {test : mbti});
 });
 
 router.post('/compatibility/run', function(req, res, next) {

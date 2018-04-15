@@ -28,7 +28,7 @@ block content
 			for result,index in results 		
 				.col-xs-6.col-sm-3
 					.well
-						p.dimension-result-percentage= (Math.round(result*100,0)) + "%"
+						p.dimension-result-percentage= (Math.round(result,0)) + "%"
 						p.dimension-result-name= test.metrics[index][binary_results[index]].long
 
 

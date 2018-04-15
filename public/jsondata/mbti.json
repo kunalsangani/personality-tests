@@ -1,5 +1,9 @@
 {
 	"name" : "MBTI Test",
+	"scale" : {
+		"low" : -3,
+		"high" : 3
+	},
 	"metrics" : [
 		{
 			"1" : {
@@ -45,67 +49,83 @@
 	"types" : [
 		{
 			"short" : "ISFP",
-			"description" : "Composer"
+			"description" : "Composer",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ESFP",
-			"description" : "Performer"
+			"description" : "Performer",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "INFP",
-			"description" : "Healer"
+			"description" : "Healer",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ENFP",
-			"description" : "Champion"
+			"description" : "Champion",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ISTP",
-			"description" : "Crafter"
+			"description" : "Crafter",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ESTP",
-			"description" : "Promoter"
+			"description" : "Promoter",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "INTP",
-			"description" : "Architect"
+			"description" : "Architect",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ENTP",
-			"description" : "Inventor"
+			"description" : "Inventor",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ISFJ",
-			"description" : "Protector"
+			"description" : "Protector",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ESFJ",
-			"description" : "Provider"
+			"description" : "Provider",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "INFJ",
-			"description" : "Counselor"
+			"description" : "Counselor",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ENFJ",
-			"description" : "Teacher"
+			"description" : "Teacher",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ISTJ",
-			"description" : "Inspector"
+			"description" : "Inspector",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ESTJ",
-			"description" : "Supervisor"
+			"description" : "Supervisor",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "INTJ",
-			"description" : "Mastermind"
+			"description" : "Mastermind",
+			"icon" : "#FFDD22"
 		},
 		{
 			"short" : "ENTJ",
-			"description" : "Fieldmarshal"
+			"description" : "Fieldmarshal",
+			"icon" : "#FFDD22"
 		}
 	],
 	"matches" : {
