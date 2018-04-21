@@ -8,6 +8,14 @@ body {
 	text-align: center;
 }
 
+#form-container {
+	text-align: center;
+}
+
+.carousel-wrapper {
+	max-width: 600px;
+}
+
 #title {
 	font-size: 35px;
 	font-weight: bold;
@@ -22,15 +30,90 @@ h2, #subtitle {
 	margin: 0 0 15px 0;
 }
 
-input.percentage-input, #result-percentage {
-	font-size: 70px;
-	font-weight: 200;
-	text-align: center;
-	max-width: 100% !important;
-	background: none;
-	border: none;
+.percentage-input {
+	font-size: 18px;
 }
 
 #result-wrapper {
 	margin-top: 20px;
+}
+
+/* ----------------------------- INPUT TOGGLES ---------------- */
+
+.toggle-div {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+p.right-label, p.left-label {
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin: 10px 10px 10px 10px;
+	vertical-align: middle;
+	color: #aaa;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+p.left-label {
+	text-align: left;
+}
+
+p.right-label {
+	text-align: right;
+}
+
+p.right-label.selected, p.left-label.selected {
+	color: #ff9514;
+	font-weight: bold;
+}
+
+/* ----------------------------- INPUT TOGGLES ---------------- */
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	min-width: 60px;
+	height: 36px;
+	vertical-align: middle;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 18px;
+	background-color: #aaa;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 28px;
+	width: 28px;
+	left: 4px;
+	bottom: 4px;
+	border-radius: 14px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(24px);
+	-ms-transform: translateX(24px);
+	transform: translateX(24px);
 }

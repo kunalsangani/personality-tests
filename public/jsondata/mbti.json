@@ -1,5 +1,6 @@
 {
 	"name" : "MBTI Test",
+	"description" : "Find your type in less than 15 minutes using our quick test. Mark the extent to which you agree or disagree with the statements below. Try to avoid marking \"Neutral.\"",
 	"scale" : {
 		"low" : -3,
 		"high" : 3
@@ -8,124 +9,188 @@
 		{
 			"1" : {
 				"short" : "E",
-				"long" : "Extroverted"
+				"long" : "Extroverted",
+				"noun" : "Extraversion",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			},
 			"0" : {
 				"short" : "I",
-				"long" : "Introverted"
+				"long" : "Introverted",
+				"noun" : "Introversion",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			}
 		},
 		{
 			"1" : {
 				"short" : "N",
-				"long" : "Intuitive"
+				"long" : "Intuitive",
+				"noun" : "Intuition",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			},
 			"0" : {
 				"short" : "S",
-				"long" : "Sensing"
+				"long" : "Sensing",
+				"noun" : "Sensing",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			}
 		},
 		{
 			"1" : {
 				"short" : "T",
-				"long" : "Thinking"
+				"long" : "Thinking",
+				"noun" : "Thinking",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			},
 			"0" : {
 				"short" : "F",
-				"long" : "Feeling"
+				"long" : "Feeling",
+				"noun" : "Feeling",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			}
 		},
 		{
 			"1" : {
 				"short" : "J",
-				"long" : "Judging"
+				"long" : "Judging",
+				"noun" : "Judging",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			},
 			"0" : {
 				"short" : "P",
-				"long" : "Perceiving"
+				"long" : "Perceiving",
+				"noun" : "Perceiving",
+				"low_description" : "todo",
+				"med_description" : "todo",
+				"high_description" : "todo"
 			}
 		}
 	],
 	"types" : [
 		{
 			"short" : "ISFP",
-			"description" : "Composer",
-			"icon" : "#FFDD22"
+			"tagline" : "Composer",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ESFP",
-			"description" : "Performer",
-			"icon" : "#FFDD22"
+			"tagline" : "Performer",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "INFP",
-			"description" : "Healer",
-			"icon" : "#FFDD22"
+			"tagline" : "Healer",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ENFP",
-			"description" : "Champion",
-			"icon" : "#FFDD22"
+			"tagline" : "Champion",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ISTP",
-			"description" : "Crafter",
-			"icon" : "#FFDD22"
+			"tagline" : "Crafter",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ESTP",
-			"description" : "Promoter",
-			"icon" : "#FFDD22"
+			"tagline" : "Promoter",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "INTP",
-			"description" : "Architect",
-			"icon" : "#FFDD22"
+			"tagline" : "Architect",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ENTP",
-			"description" : "Inventor",
-			"icon" : "#FFDD22"
+			"tagline" : "Inventor",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ISFJ",
-			"description" : "Protector",
-			"icon" : "#FFDD22"
+			"tagline" : "Protector",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ESFJ",
-			"description" : "Provider",
-			"icon" : "#FFDD22"
+			"tagline" : "Provider",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "INFJ",
-			"description" : "Counselor",
-			"icon" : "#FFDD22"
+			"tagline" : "Counselor",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ENFJ",
-			"description" : "Teacher",
-			"icon" : "#FFDD22"
+			"tagline" : "Teacher",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ISTJ",
-			"description" : "Inspector",
-			"icon" : "#FFDD22"
+			"tagline" : "Inspector",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ESTJ",
-			"description" : "Supervisor",
-			"icon" : "#FFDD22"
+			"tagline" : "Supervisor",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "INTJ",
-			"description" : "Mastermind",
-			"icon" : "#FFDD22"
+			"tagline" : "Mastermind",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		},
 		{
 			"short" : "ENTJ",
-			"description" : "Fieldmarshal",
-			"icon" : "#FFDD22"
+			"tagline" : "Fieldmarshal",
+			"icon" : "#FFDD22",
+			"color_scheme" : ["#FFDD22", "#33EE88", "#77FF44"],
+			"description" : "todo"
 		}
 	],
 	"matches" : {

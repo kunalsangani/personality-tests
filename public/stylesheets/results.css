@@ -26,3 +26,12 @@ p.dimension-result-percentage {
 	font-size: 70px;
 	font-weight: 200;
 }
+
+.type-section {
+	height: 70%;
+}
+
+.metric-section {
+	height: 50%;
+	width: 100%;
+}

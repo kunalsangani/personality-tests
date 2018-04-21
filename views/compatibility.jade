@@ -1,19 +1,6 @@
 extends layout
 
 block content
-	.nav.navbar.navbar-default
-		.container-fluid
-			.navbar-header
-				button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href='/') FIND YOUR TYPE
-			#navbar.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li: a(href='/test/mbti') TAKE THE TEST
-					li: a(href='/test/compatibility') COMPATIBILITY
-
 	#headline-container.container-fluid
 		.row
 			.col-xs-12
@@ -21,45 +8,47 @@ block content
 		.row
 			.col-xs-12
 				h4 Use our tool to calculate your compatibility with another as a teammate, co-worker, friend, and romantic partner. If you haven't already, take our test to find your personality type, and enter your results below.
-		form(action='/test/compatibility/run', method='POST')
-			for person_index in [1, 2]
-				hr
+		hr
+		#form-container.container
+			form(action='/test/compatibility/result', method='POST')
+				.owl-carousel
+					for person_index in [1, 2]
+						.carousel-page-wrapper
+							.row
+								.col-xs-12
+									h2.person-label Person #{person_index}
+							.row.type-input
+								for metric,index in test.metrics
+									.col-xs-12
+										.row.button-group-row
+											.col-xs-2.toggle-div
+												p.left-label.selected(name= person_index + "" + index) #{metric[0].long}
+											.col-xs-1.toggle-div
+												label.switch
+													input(type="checkbox", name= person_index + "" + index)
+													span.slider
+											.col-xs-2.toggle-div
+												p.right-label(name= person_index + "" + index) #{metric[1].long}
+											.col-xs-7
+												input.percentage-input(name= person_index + "" + index, value="0%")
+												// p.dimension-name(name= person_index + "" + index) #{metric[0].long}
 				.row
 					.col-xs-12
-						h2.person-label Person #{person_index}
-				.row.type-input
-					for metric,index in test.metrics
-						.col-xs-12.col-sm-6.col-md-3
-							.row.button-group-row
-								.col-xs-12
-									.btn-group.btn-group-justified(data-toggle="buttons")
-										label.btn.btn-primary.active.metric-button
-											#[input.metric-toggle(type="radio", name= person_index + "" + index, checked, value="0")] #{metric[0].long}
-										label.btn.btn-primary.metric-button
-											#[input.metric-toggle(type="radio", name= person_index + "" + index, value="1")] #{metric[1].long}
-							.row.well-row
-								.col-xs-12
-									.well
-										//p.dimension-percentage(contenteditable="true", name= person_index + "" + index) 50%
-										input.percentage-input(name= person_index + "" + index, value="50%")
-										p.dimension-name(name= person_index + "" + index) #{metric[0].long}
+						button.btn#next-page(type='button') Next
 			.row
 				.col-xs-12
-					button.btn.btn-default Submit
-		.row
-			.col-xs-12
-				.well#result-wrapper
-					.row
-						.col-xs-12 
-							h2 Your result:
-					.row
-						.col-xs-12 
-							p#result-percentage compatibility
+					.well#result-wrapper
+						.row
+							.col-xs-12 
+								h2 Your result:
+						.row
+							.col-xs-12 
+								p#result-percentage compatibility
 
 
 block packages
-	link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u",crossorigin="anonymous")
+	link(rel="stylesheet",href="/owlcarousel/assets/owl.carousel.min.css")
+	link(rel="stylesheet",href="/owlcarousel/assets/owl.theme.default.min.css")
 	link(rel='stylesheet', href='/stylesheets/compatibility.css')
-	script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
-	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa",crossorigin="anonymous")
+	script(src="/owlcarousel/owl.carousel.min.js")
 	script(src="/javascripts/compatibility.js")

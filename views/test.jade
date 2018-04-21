@@ -17,13 +17,12 @@ block content
 	.container#title-container
 		.row
 			.col-lg-12
-				h1#title FIND YOUR TYPE
-				// h1= test.name
-				h4#title-description Find your type in less than 15 minutes using our quick test. Mark the extent to which you agree or disagree with the statements below. Try to avoid marking "Neutral."
+				h1#title= test.name
+				h4#title-description= test.description
 		hr
 
 	.container#test-container
-		form(action='/test/mbti/result', method='POST')
+		form#test_form(action='/test/mbti/result', method='POST')
 			.owl-carousel
 				- for(var i = 0; i < test.questions.length/6; i++) {
 					.carousel-question-wrapper
@@ -46,7 +45,6 @@ block content
 			.row
 				.col-lg-12#submit-div
 					button.btn.btn-default#next-page(type='button') Continue
-					button.btn.btn-default#submit-form(type='submit') Submit
 
 block packages
 	link(rel="stylesheet",href="/owlcarousel/assets/owl.carousel.min.css")

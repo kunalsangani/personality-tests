@@ -14,22 +14,33 @@ block content
 					li: a(href='/test/mbti') TAKE THE TEST
 					li: a(href='/test/compatibility') COMPATIBILITY
 
-	#headline-container.container-fluid
-		.row
-			.col-xs-12
-				h4 Your type is
-		.row
-			.col-xs-12
-				h1#result-title= headline_result.short
-		.row
-			.col-xs-12
-				h2#result-subtitle The #{headline_result.description}
-		#type-breakdown.row
-			for result,index in results 		
-				.col-xs-6.col-sm-3
-					.well
-						p.dimension-result-percentage= (Math.round(result,0)) + "%"
-						p.dimension-result-name= test.metrics[index][binary_results[index]].long
+	//#headline-container.container-fluid
+	.type-section
+		h4 Your type is
+		h1#result-title= headline_result.short
+		h2#result-subtitle The #{headline_result.tagline}
+	for result,index in results
+		.metric-section.container(style="background-color:" + headline_result.color_scheme[index % headline_result.color_scheme.length])
+			h1.dimension-label #{test.metrics[index][binary_results[index]].short}
+			h2.dimension-headline Moderate preference for #{test.metrics[index][binary_results[index]].noun} (#{Math.round(result,0)}%)
+			p.dimension-description #{test.metrics[index][binary_results[index]].med_description}
+
+
+	//	.row
+	//		.col-xs-12
+	//			h4 Your type is
+	//	.row
+	//		.col-xs-12
+	//			h1#result-title= headline_result.short
+	//	.row
+	//		.col-xs-12
+	//			h2#result-subtitle The #{headline_result.description}
+	//	#type-breakdown.row
+	//		for result,index in results 		
+	//			.col-xs-6.col-sm-3
+	//				.well
+	//					p.dimension-result-percentage= (Math.round(result,0)) + "%"
+	//					p.dimension-result-name= test.metrics[index][binary_results[index]].long
 
 
 block packages
