@@ -4,46 +4,40 @@ block content
 	#headline-container.container-fluid
 		.row
 			.col-xs-12
-				h1#title Test compatibility
+				h1.title Test compatibility
 		.row
 			.col-xs-12
 				h4 Use our tool to calculate your compatibility with another as a teammate, co-worker, friend, and romantic partner. If you haven't already, take our test to find your personality type, and enter your results below.
 		hr
 		#form-container.container
-			form(action='/test/compatibility/result', method='POST')
+			form#compatibility-form(action='/compatibility/mbti/result', method='POST')
 				.owl-carousel
 					for person_index in [1, 2]
 						.carousel-page-wrapper
 							.row
 								.col-xs-12
 									h2.person-label Person #{person_index}
+							.row
+								.col-xs-12
+									p Name
+									input
 							.row.type-input
 								for metric,index in test.metrics
 									.col-xs-12
 										.row.button-group-row
-											.col-xs-2.toggle-div
+											.col-sm-6.col-xs-12
 												p.left-label.selected(name= person_index + "" + index) #{metric[0].long}
-											.col-xs-1.toggle-div
 												label.switch
-													input(type="checkbox", name= person_index + "" + index)
+													input.click-toggle(type="checkbox", name= person_index + "" + index, value="1")
 													span.slider
-											.col-xs-2.toggle-div
 												p.right-label(name= person_index + "" + index) #{metric[1].long}
-											.col-xs-7
-												input.percentage-input(name= person_index + "" + index, value="0%")
-												// p.dimension-name(name= person_index + "" + index) #{metric[0].long}
+											.col-sm-6.col-xs-12
+												label Strength of preference:  
+												input.percentage-input(name= JSON.stringify({key : person_index + "" + index}), value="0%")
+										hr.metric-break
 				.row
 					.col-xs-12
 						button.btn#next-page(type='button') Next
-			.row
-				.col-xs-12
-					.well#result-wrapper
-						.row
-							.col-xs-12 
-								h2 Your result:
-						.row
-							.col-xs-12 
-								p#result-percentage compatibility
 
 
 block packages

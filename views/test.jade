@@ -1,24 +1,11 @@
 extends layout
 
 block content
-	.nav.navbar.navbar-default
-		.container-fluid
-			.navbar-header
-				button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href='/') FIND YOUR TYPE
-			#navbar.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li: a(href='/test/mbti') TAKE THE TEST
-					li: a(href='/test/compatibility') COMPATIBILITY
-
 	.container#title-container
 		.row
 			.col-lg-12
-				h1#title= test.name
-				h4#title-description= test.description
+				h1.title= test.name
+				h4= test.description
 		hr
 
 	.container#test-container

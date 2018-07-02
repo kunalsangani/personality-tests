@@ -5,23 +5,31 @@
 		"low" : -3,
 		"high" : 3
 	},
+	"threshold" : {
+		"med" : 0.15,
+		"high" : 0.35
+	},
 	"metrics" : [
 		{
 			"1" : {
 				"short" : "E",
 				"long" : "Extroverted",
 				"noun" : "Extraversion",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"You're oriented toward the world around you. You draw energy from activity, people, and objects, and you might find that you think best when discussing with others. Of course, there are times where you feel sapped of energy from spending too long around others. But the reverse is also true: too much time spent alone leaves you craving connection and action.",
+					"You prefer to interact with the world around you: taking action, meeting people, trying things hands-on. You think best when discussing ideas with others, and, while you might enjoy alone time to decompress, you find that doing things or connecting with people often propels you forward.",
+					"You're oriented toward the world around you. Rather than dwell on ideas or reflections, you prefer to be out there, connecting with people, taking action, and interacting with the world. After long periods alone, you might feel sapped of the energy that rushes through you when you spend time doing and connecting."
+				]
 			},
 			"0" : {
 				"short" : "I",
 				"long" : "Introverted",
 				"noun" : "Introversion",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"A slight preference toward introversion doesn't mean that you aren't social: In fact, you may cultivate strong friendships due to your ability to offer fresh thoughts from your reflections. Rather, it means you tend to draw energy from quiet time rather than from people, objects, or activities per se. You might enjoy spending time with others, especially close friends who you feel you can be yourself with, though you might find yourself craving some time to re-charge after a marathon of social events.",
+					"You tend to draw energy from time to yourself. This doesn't mean you're antisocial or unfriendly: Instead, your energy is more directed toward the world of reflection and ideas than people or objects. This often gives you a unique outlook on your surroundings, and you might seek out strong one-on-one friendships with others who see the world the same way you do.",
+					"You prefer personal space for reflection, thinking and dreaming to the hustle and bustle of the world around you. You find long social engagements draining and less worth your time than reading a good book, playing a video game, or otherwise giving yourself personal space to decompress."
+				]
 			}
 		},
 		{
@@ -29,17 +37,21 @@
 				"short" : "N",
 				"long" : "Intuitive",
 				"noun" : "Intuition",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			},
 			"0" : {
 				"short" : "S",
 				"long" : "Sensing",
 				"noun" : "Sensing",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			}
 		},
 		{
@@ -47,17 +59,21 @@
 				"short" : "T",
 				"long" : "Thinking",
 				"noun" : "Thinking",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			},
 			"0" : {
 				"short" : "F",
 				"long" : "Feeling",
 				"noun" : "Feeling",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			}
 		},
 		{
@@ -65,17 +81,21 @@
 				"short" : "J",
 				"long" : "Judging",
 				"noun" : "Judging",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			},
 			"0" : {
 				"short" : "P",
 				"long" : "Perceiving",
 				"noun" : "Perceiving",
-				"low_description" : "todo",
-				"med_description" : "todo",
-				"high_description" : "todo"
+				"descriptions" : [
+					"low",
+					"med",
+					"high"
+				]
 			}
 		}
 	],

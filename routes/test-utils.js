@@ -2,6 +2,9 @@ var pass_key = 'tv7G7TzOjMsrGVzf1ipKXMbi4IQYXsY1';
 var encrypter = require('object-encrypter');
 var engine = encrypter(pass_key, {});
 
+exports.encrypt = engine.encrypt;
+exports.decrypt = engine.decrypt;
+
 exports.encode_percentages_as_string = function(percentages) {
 	return engine.encrypt({'percentages' : percentages})
 }

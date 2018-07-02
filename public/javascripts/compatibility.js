@@ -1,8 +1,11 @@
 var control_input_text = function() {
-	$('.percentage-input').on('focus', function(e) {
+	$('.percentage-input').on('click', function(e) {
 		console.log(e.target)
 		$(e.target).attr('value', '%');
+		$(e.target).attr('selectionStart', 0);
 		$(e.target)[0].setSelectionRange(0, 0);
+		console.log(e.target.selectionStart)
+		console.log($(e.target).prop('selectionStart'))
 	})
 
 	$('.percentage-input').keydown(function(e) {
@@ -42,21 +45,17 @@ var control_input_text = function() {
 
 var setup_metric_toggles = function() {
 	var toggle_if_label_clicked = function(e) {
-		e.preventDefault();
 		if(!$(e.target).hasClass('selected')) {
 			console.log($(e.target).attr('name'));
-			$('input[name=' + $(e.target).attr('name') + ']').click();
+			$('input.click-toggle[name=' + $(e.target).attr('name') + ']').click();
 		}
 	}
 	$('p.left-label').on('click', toggle_if_label_clicked);
 	$('p.right-label').on('click', toggle_if_label_clicked);
 	$('input').on('change', function(e) {
-		console.log($(e.target).attr('name'));
 		var left_label = $('p.left-label[name=' + $(e.target).attr('name') + ']');
 		var right_label = $('p.right-label[name=' + $(e.target).attr('name') + ']');
-		console.log(left_label)
 		if($(e.target).prop('checked')) {
-			console.log("Removing class")
 			left_label.removeClass('selected');
 			right_label.addClass('selected');
 		} else {
@@ -78,12 +77,9 @@ var setupCarousel = function() {
 
 	$('#next-page').click(function() {
 		if(submit_ready) {
-			$('#test_form').submit();
+			$('#compatibility-form').submit();
 		} else {
 			owl.trigger('next.owl.carousel');
-			$('html,body').animate({
-			 	scrollTop: $('#test-container').offset().top
-			}, 400)
 		}
 	})
 
@@ -99,20 +95,5 @@ setup_metric_toggles();
 setupCarousel();
 
 $(document).ready(function() { 
-	$('#result-wrapper').hide();
-
-	$('form').submit(function() {
-		$.post($(this).attr('action'), $(this).serialize(), function(response) {
-			$('#result-percentage').text(Math.round(response.result) + "% compatible");
-			$('#result-wrapper').slideDown();
-		}, 'json');
-		return false;
-	});
-
-	// $('.metric-button').on('change', function(event) {
-	// 	$(".dimension-name[name='" + event.target.name + "']")
-	// 		.text($(event.currentTarget).text())
-	// });
-
 	control_input_text();
 })

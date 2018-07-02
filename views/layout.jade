@@ -6,13 +6,15 @@ html
 		link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400",rel="stylesheet")
 		link(rel='stylesheet', href='/stylesheets/style.css')
 	body
-		div.menu.menu-top
-			a.item.active Hi
-			a.item Bye
-		block content
+		.menu.menu-top
+			a.btn.item(href="/test/mbti/") Personality test
+			a.btn.item(href="/compatibility/mbti/") Compatibility test
+		.body-padder
+			block content
 		hr
-		#footer-container.container-fluid
-			p Find Your Type
+		#footer-container
+			.container-fluid
+				p Find Your Type
 		
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	.type-section
+		h4.result-lead-in Your compatibility is
+		h1.headline-result= Math.round(result.compatibility.headline,0) + "%"
+		h2.result-subtitle The #{result.compatibility.headline}
+
+block packages
+	link(rel='stylesheet', href='/stylesheets/results.css')
